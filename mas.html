@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers for Chuu</title>
+
+    <!-- Bootstrap Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Icono de la pestaña -->
+    <link rel="icon" type="image/png" href="img/chuu_window.jpg">
+
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/381d681eb9.js" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <!-- Menu navbar arriba -->
+    <header class="header_wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="img/logo.png" class="img-fluid" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-stream navbar-toggler-icon"></i>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav menu-navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cursos">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#plantilla">Plantilla</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeria">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ventas">Ventas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal2">Contacto</a>
+                        </li>
+                        <li class="nav-item mt-3 mt-lg-0">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modalVentas"> Mi Cesta
+                                <i class="fa-solid fa-cart-shopping" id="carritoContenedor">0</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- fin del navbar -->
+
+    <section id="about" class="about_wrapper">
+        <div class="container">
+            <div class="row flex-lg-row flex-column-reverse ">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h3><span> <br class="d-none d-lg-block">flowers</span> for chuu</h3>
+                    <p>
+                        Lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                        dolores eos qui ratione voluptatemlorum luptatem quia voluptas sit aspernatur aut
+                    </p>
+                    <p>
+                        Lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                        dolores eos qui ratione voluptatem
+                    </p>
+                </div>
+                <div class="col-lg-6 mb- mb-lg-0 ps-lg-4 text-center">
+                    <img src="img/tienda4.jpg" class="img-fluid" alt="About Us">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4 mt-5">
+                    <div class="card p-0 border-0 rounded-0">
+                        <img src="img/blog/libro2.jpg" alt="">
+                        <div class="blog-content bg-white p-4">
+                            <h5 class="text-decoration-underline mb-4">Libro</h5>
+                            <h6>By Chuu - 18 Febrero, 2021</h6>
+                            <p class="mt-2">lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia<p></p>
+                            <p class="mt-2">lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 text-lg-start">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                magni
+                                dolores eos qui ratione voluptatem lorum luptatem quia voluptas
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col">
+                            <p>
+                                Lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                magni dolores eos qui ratione voluptatem
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                magni
+                                dolores eos qui ratione voluptatem
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h5>luptatem</h5>
+                            <p><span>Mesa</span> luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-end">
+                        <div class="col ">
+                            <p>
+                                Lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                magni
+                                dolores eos qui ratione voluptatem lorum luptatem quia voluptas sit aspernatur aut odit
+                                aut fugit, sed quia consequuntur magni
+                                dolores eos qui ratione voluptate
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card p-0 rounded-3">
+                                <img src="img/plantilla/eunwoo2.jpg" class="img-fluid rounded-3" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cursos -->
+                <section id="cursos" class="cursos_wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 section-title text-center mb-5">
+                                <h6>Cursos</h6>
+                            </div>
+                        </div>
+                        <div class="row m-0">
+                            <div class="col-md-4 mb-4 mb-lg-0">
+                                <div class="curso-item">
+                                    <img src="./img/cursos/ramo2.jpg" class="img-fluid">
+                                    <div class="curso-item-wrap">
+                                        <div class="curso-content">
+                                            <!-- si el texto es mas largo o mas corto el hoover me va a quedar de distintos tamaños -> intentar que sean de una longitus parecida -->
+                                            <h5 class="text-white mb-lg-5 text-decoration-underline">Ramo Parisino</h5>
+                                            <p class="text-white">
+                                                Lorum luptatem quia voluptas sit aspernatur aut odit
+                                                aut fugit, sed quia consequuntur magni
+                                            </p>
+                                            <p class="text-white fw-bold mt-lg-4">lorum luptatem quia voluptas sit aspernatur</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4 mb-lg-0">
+                                <div class="curso-item">
+                                    <img src="./img/cursos/arbol2.jpg" class="img-fluid">
+                                    <div class="curso-item-wrap">
+                                        <div class="curso-content">
+                                            <h5 class="text-white mb-lg-5 text-decoration-underline">Árbol Tropical</h5>
+                                            <p class="text-white">
+                                                Lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                                            </p>
+                                            <p class="text-white fw-bold mt-lg-4">
+                                                Lorum luptatem quia voluptas sit aspernatur
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4 mb-lg-0">
+                                <div class="curso-item">
+                                    <img src="./img/cursos/corazon2.jpg" class="img-fluid">
+                                    <div class="curso-item-wrap">
+                                        <div class="curso-content">
+                                            <h5 class="text-white mb-lg-5 text-decoration-underline">Ramo Corazón</h5>
+                                            <p class="text-white">
+                                                Lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                                            </p>
+                                            <p class="text-white fw-bold mt-lg-4">
+                                                Lorum luptatem quia voluptas sit aspernatur
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0">
+                            <div class="col-md-4 mb-4 mb-lg-0 mt-3">
+                                <p>lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                                <p>lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                            </div>
+                            <div class="col-md-4 mb-4 mb-lg-0 mt-3">
+                                <p>lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                                <p>lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                            </div>
+                            <div class="col-md-4 mb-4 mb-lg-0 mt-3">
+                                <p>lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                                <p>lorum luptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Cursos fin -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="contact" class="footer_wrapper mt-3 mt-md-0 pb-0">
+        <div class="container pb-3">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h5>Localización de tienda</h5>
+                    <p class="ps-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim erat ut laoreet pharetra....</p>
+                    <div class="contact-info">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa fa-home me-3"></i>Calle de la Galería de Robles, 4, Madrid</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-phone me-3"></i>+34 111 222 333</a></li>
+                            <li><a href="#"><i class="fa fa-envelope me-3"></i>forchuu@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Mas Links</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Nuestra Tienda</a></li>
+                        <li><a href="#">Libros</a></li>
+                        <li><a href="#">Clases</a></li>
+                        <li><a href="#">Garantía</a></li>
+                        <li><a href="#">Política De Devolución</a></li>
+                        <li><a href="#">Cursos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Demo Links</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Nuestra Tienda</a></li>
+                        <li><a href="#">Libros</a></li>
+                        <li><a href="#">Clases</a></li>
+                        <li><a href="#">Garantía</a></li>
+                        <li><a href="#">Política De Devolución</a></li>
+                        <li><a href="#">Cursos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contacto</h5>
+                    <div class="form-group mb-4">
+                        <button type="submit" class="main-btn rounded-2 mt-3 border-white text-white"
+                            data-bs-toggle="modal" data-bs-target="#exampleModalContacto"
+                            onclick="recogerDatos()">Contáctanos</button>
+                    </div>
+                    <h5>Conéctate</h5>
+                    <ul class="social-network d-flex align-items-center p-0">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright-section">
+            <p>Copyright <a href="#">&copy;Flowers For Chuu</a> All Rights Reserved</p>
+        </div>
+    </section>
+    <!-- Footer fin -->
+
+    <!-- Bootstrap JS  Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+    <!-- js Link -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
