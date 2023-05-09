@@ -276,8 +276,10 @@ function enviarPedido(e) {
             // Quitamos el cartel de éxito tras 5seg.
             setTimeout(() => {
                 alertExito.remove()
+                location.href = "index.html"
             }, 5000)
         }, 3000)
     }
     localStorage.clear()
+    
 } 
