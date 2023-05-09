@@ -68,8 +68,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#blog">Blog</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal2">Contacto</a>
+                        <li class="nav-item mt-3 mt-lg-0">
+                            <a class="nav-link" href="#reservar">Reservar</a>
                         </li>
                         <li class="nav-item mt-3 mt-lg-0">
                             <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modalVentas"> Mi Cesta
@@ -140,109 +140,111 @@
                     <strong class="me-auto">ERROR</strong>
                     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
+                <div class="toast-body">
+                    Por favor ingrese una dirección de correo correcta.
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="position-absolute top-0 end-0 p-3" style="z-index: 10000">
-        <div id="toastclase" class="toast bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <strong class="me-auto">ERROR</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-                Por favor seleccione una de las clases disponibles.
+        <div class="position-absolute top-0 end-0 p-3" style="z-index: 10000">
+            <div id="toastclase" class="toast bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">ERROR</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Por favor seleccione una de las clases disponibles.
+                </div>
             </div>
         </div>
-    </div>
-    <!-- FIN TOASTS -->
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Reserva</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- pedir cita -->
+        <!-- FIN TOASTS -->
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Reserva</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- pedir cita -->
 
-                <form class="row">
-                    <div class="col-lg mb-3 mb-lg-0">
-                        <input type="text" class="bg-white form-control" id="dateholder" placeholder=""
-                            readonly="readonly">
-                    </div>
-                    <div class="col-lg mb-3 mb-lg-0">
-                        <select id="personasholder" class="form-select">
-                            <option selected disabled>Personas</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </div>
-                    <div class="col-lg mb-3 mb-lg-0">
-                        <select id="sesionholder" class="form-select">
-                            <option selected disabled>Sesion</option>
-                            <option value="1">Pública</option>
-                            <option value="2">Privada</option>
-                        </select>
-                    </div>
-                </form>
-                <form class="row">
-                    <div class="col-lg mb-3 mb-lg-0">
-                        <label for="recipient-name" class="col-form-label">Nombre:</label>
-                        <input type="text" class="form-control" id="recipientininom"
-                            onkeydown="return /^[a-zA-ZäöüßÄÖÜáéíóúÁÉÍÓÚ]/.test(event.key)">
-                    </div>
-                </form>
-                <form class="row">
-                    <div class="col-lg mb-3 mb-lg-0">
-                        <label for="recipient-name" class="col-form-label">Tlfno:</label>
-                        <input type="text" class="form-control" id="recipienttlfn" maxlength="9"
-                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
-                    </div>
-                </form>
-                <form class="row">
-                    <div class="col-lg mb-3 mb-lg-0">
-                        <label for="recipient-name" class="col-form-label">Correo:</label>
-                        <input type="text" class="form-control" id="recipientemail">
-                    </div>
-                </form>
-                <form class="row">
-                    <div class="col-lg mb-3 mb-lg-0">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckUno">
-                            <label class="form-check-label" for="flexCheckUno">
-                                Ramo Parisino
-                            </label>
+                    <form class="row">
+                        <div class="col-lg mb-3 mb-lg-0">
+                            <input type="text" class="bg-white form-control" id="dateholder" placeholder=""
+                                readonly="readonly">
                         </div>
-                    </div>
-                    <div class="col-lg mb-3 mb-lg-0">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDos">
-                            <label class="form-check-label" for="flexCheckDos">
-                                Árbol tropical
-                            </label>
+                        <div class="col-lg mb-3 mb-lg-0">
+                            <select id="personasholder" class="form-select">
+                                <option selected disabled>Personas</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
                         </div>
-                    </div>
-                    <div class="col-lg mb-3 mb-lg-0">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckTres">
-                            <label class="form-check-label" for="flexCheckTres">
-                                Ramo Corazón
-                            </label>
+                        <div class="col-lg mb-3 mb-lg-0">
+                            <select id="sesionholder" class="form-select">
+                                <option selected disabled>Sesion</option>
+                                <option value="1">Pública</option>
+                                <option value="2">Privada</option>
+                            </select>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                    <form class="row">
+                        <div class="col-lg mb-3 mb-lg-0">
+                            <label for="recipient-name" class="col-form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="recipientininom"
+                                onkeydown="return /^[a-zA-ZäöüßÄÖÜáéíóúÁÉÍÓÚ]/.test(event.key)">
+                        </div>
+                    </form>
+                    <form class="row">
+                        <div class="col-lg mb-3 mb-lg-0">
+                            <label for="recipient-name" class="col-form-label">Tlfno:</label>
+                            <input type="text" class="form-control" id="recipienttlfn" maxlength="9"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                        </div>
+                    </form>
+                    <form class="row">
+                        <div class="col-lg mb-3 mb-lg-0">
+                            <label for="recipient-name" class="col-form-label">Correo:</label>
+                            <input type="text" class="form-control" id="recipientemail">
+                        </div>
+                    </form>
+                    <form class="row">
+                        <div class="col-lg mb-3 mb-lg-0">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckUno">
+                                <label class="form-check-label" for="flexCheckUno">
+                                    Ramo Parisino
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg mb-3 mb-lg-0">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDos">
+                                <label class="form-check-label" for="flexCheckDos">
+                                    Árbol tropical
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg mb-3 mb-lg-0">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckTres">
+                                <label class="form-check-label" for="flexCheckTres">
+                                    Ramo Corazón
+                                </label>
+                            </div>
+                        </div>
+                    </form>
 
-                <!-- Pedir cita fin -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="main-btn mt-4" onclick="validarReserva()">Enviar</button>
+                    <!-- Pedir cita fin -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="main-btn mt-4" onclick="validarReserva()">Enviar</button>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- Modal -->
     <div class="modal fade" id="exampleModalContacto" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -376,7 +378,7 @@
     <section id="home" class="banner_wrapper p-0">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url(./images/slider/campo.jpg);">
+                <div class="swiper-slide" style="background-image: url(./img/slider/campo.jpg);">
                     <div class="slide-caption text-center">
                         <div>
                             <h1>welcome to flowers for chuu</h1>
@@ -384,7 +386,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-image: url(./images/slider/clase.jpg);">
+                <div class="swiper-slide" style="background-image: url(./img/slider/clase.jpg);">
                     <div class="slide-caption text-center">
                         <div>
                             <h1>welcome to flowers for chuu</h1>
@@ -658,7 +660,8 @@
                             <h5>Daniel García</h5>
                             <p>Profesor</p>
                             <ul class="social-network">
-                                <li><a href="https://www.facebook.com/offclASTRO"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.facebook.com/offclASTRO"><i class="fab fa-facebook-f"></i></a>
+                                </li>
                                 <li><a href="https://twitter.com/offclASTRO"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                 <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
@@ -673,7 +676,8 @@
                             <h5>Yolanda Romero</h5>
                             <p>Profesora</p>
                             <ul class="social-network">
-                                <li><a href="https://www.facebook.com/RedVelvet"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.facebook.com/RedVelvet"><i class="fab fa-facebook-f"></i></a>
+                                </li>
                                 <li><a href="https://twitter.com/RVsmtown"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                 <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
@@ -688,7 +692,8 @@
                             <h5>Irene del Castillo</h5>
                             <p>Manager</p>
                             <ul class="social-network">
-                                <li><a href="https://www.facebook.com/RedVelvet"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.facebook.com/RedVelvet"><i class="fab fa-facebook-f"></i></a>
+                                </li>
                                 <li><a href="https://twitter.com/RVsmtown"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                 <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
@@ -703,7 +708,8 @@
                             <h5>Hugo López</h5>
                             <p>Profesor</p>
                             <ul class="social-network">
-                                <li><a href="https://www.facebook.com/TXT.bighit"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.facebook.com/TXT.bighit"><i class="fab fa-facebook-f"></i></a>
+                                </li>
                                 <li><a href="https://twitter.com/TXT_bighit"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                 <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
@@ -811,9 +817,9 @@
                         <div class="blog-content bg-white p-4">
                             <h5 class="text-decoration-underline mb-4">Libro</h5>
                             <h6>By Chuu - 18 Febrero, 2021</h6>
-                            <p class="mt-2">Nuestro libro con el qe podrás llevarte todo el conocimiento a tu propia casa. </p>
+                            <p class="mt-2">Nuestro libro con el qe podrás llevarte todo el conocimiento a tu propia
+                                casa. </p>
                             <a href="mas.html" class="main-btn mt-2">Leer más</a>
-
                         </div>
                     </div>
                 </div>
@@ -826,7 +832,6 @@
                             <p class="mt-2">Información detallada de nuestras clases y experienciasm del cliente.
                             </p>
                             <a href="mas.html" class="main-btn mt-2">Leer más</a>
-
                         </div>
                     </div>
                 </div>
@@ -841,7 +846,8 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <h5>Localización de tienda</h5>
-                    <p class="ps-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim erat ut laoreet pharetra....</p>
+                    <p class="ps-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim erat ut
+                        laoreet pharetra....</p>
                     <div class="contact-info">
                         <ul class="list-unstyled">
                             <li><a href="#"><i class="fa fa-home me-3"></i>Calle de la Galería de Robles, 4, Madrid</a>

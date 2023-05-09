@@ -152,7 +152,7 @@ function validarReserva() {
     var selectsesion = document.getElementById('sesionholder');
     var nombreval = document.getElementById('recipientininom');
     validatePhoneNumber();
-    ValidateEmail();
+    validateEmail();
     if (select.value == "Personas") {
         $("#toastPers").toast('show');
     } else if (selectsesion.value == "Sesion") {
