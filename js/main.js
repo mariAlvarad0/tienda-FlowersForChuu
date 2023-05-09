@@ -129,7 +129,7 @@ function validatePhoneNumber() {
 }
 
 var resulemail;
-function ValidateEmail() {
+function validateEmail() {
     var email = document.getElementById('recipientemail');
     var emailCon = document.getElementById('recipientemailCon');
     if (email.value == "") {
@@ -172,8 +172,10 @@ function validarContacto() {
     var asuntoval = document.getElementById('asuntoContacto');
     var mensajeval = document.getElementById('mensajeContacto');
     var nombreval = document.getElementById('nombreContacto');
+
     validatePhoneNumber();
-    ValidateEmail();
+    validateEmail();
+
     if (asuntoval.value == "") {
         $("#toastAsun").toast('show');
     } else if (mensajeval.value == "") {
