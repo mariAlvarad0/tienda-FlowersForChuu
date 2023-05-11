@@ -71,6 +71,7 @@ if (activarFuncion) {
 if (formulario) {
     formulario.addEventListener('submit', enviarPedido)
 }
+
 // Evitar que al recargar la página se eliminen los productos que teníamos en la cesta de la compra
 document.addEventListener('DOMContentLoaded', () => {
     carrito = JSON.parse(localStorage.getItem('carrito')) || []
