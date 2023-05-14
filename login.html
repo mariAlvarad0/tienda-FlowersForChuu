@@ -29,116 +29,108 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
     <!-- Menu navbar arriba -->
     <header class="header_wrapper">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
                 <a class="navbar-brand" href="/">
                     <img src="img/logo.png" class="img-fluid" alt="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-stream navbar-toggler-icon"></i>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav menu-navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link login-panel">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cursos">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#plantilla">Plantilla</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeria">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ventas">Ventas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reservar">Reservar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link login-panel" href="login.html">
                                 <i class="fa-solid fa-user"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#carrito">
+                                <i class="fa-solid fa-cart-shopping" id="carritoContenedor"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
     <!-- fin del navbar -->
-    <!--================ Cart Area =================-->
-    <main>
-        <h2>Carrito de compra</h2>
-        <section class="cart_area section_padding">
+
+        <!-- Register Section Begin -->
+        <div class="register-login-section spad">
             <div class="container">
-                <div class="cart_inner">
-                    <div id="carrito" class="table-responsive">
-                        <table class="table" id="lista-compra">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Producto</th>
-                                    <th scope="col">Descripción</th>
-                                    <th scope="col">Precio</th>
-                                    <th scope="col">Cantidad</th>
-                                    <th scope="col">Total</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                            <tr>
-                                <th colspan="4" scope="col" class="text-right">SUBTOTAL: </th>
-                                <th scope="col">
-                                    <p id="total"></p>
-                                </th>
-                            </tr>
-                            <tr class="shipping_area">
-                                <td>
-                                    <h5>Tipo de envío</h5>
-                                </td>
-                                <td>
-                                    <input type="radio" id="correos" name="tipo_envio" value="HTML">
-                                    <label for="html">Correos: 5.00€</label><br>
-                                    <input type="radio" id="express" name="tipo_envio" value="CSS">
-                                    <label for="css">Correos Express: 12.00€</label><br>
-                                    <input type="radio" id="mrw" name="tipo_envio" value="JavaScript">
-                                    <label for="javascript">MRW: 3.50€</label><br>
-                                    <input type="radio" id="seur" name="tipo_envio" value="JavaScript">
-                                    <label for="javascript">SEUR: 10.00€</label><br>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Tipo de pago</h5>
-                                </td>
-                                <td>
-                                    <select class="shipping_select">
-                                        <option value="1">Tarjeta crédito</option>
-                                        <option value="1">Tarjeta débito</option>
-                                        <option value="1">Mastercard</option>
-                                        <option value="2">PayPal</option>
-                                        <option value="3">Google Pay</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <!--================ Animación para tramitar pedido =================-->
-                    <div class="row justify-content-center" id="loaders">
-                        <img id="spinner" src="img/cargando.gif">
-                    </div>
-
-                    <div>
-                        <a href="/" class="main-btn2">SEGUIR COMPRANDO</a>
-                        <a href="#" class="main-btn2" id="procesar-compra">FINALIZAR PEDIDO</a>
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="login-form">
+                            <h2>Login</h2>
+                            <form action="#">
+                                <div class="group-input">
+                                    <label for="username">Username or email address *</label>
+                                    <input type="text" id="username">
+                                </div>
+                                <div class="group-input">
+                                    <label for="pass">Password *</label>
+                                    <input type="text" id="pass">
+                                </div>
+                                <div class="group-input gi-check">
+                                    <div class="gi-more">
+                                        <label for="save-pass">
+                                            <input type="checkbox" id="save-pass"> Save Password
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <a href="#" class="forget-pass">Forget your Password</a>
+                                    </div>
+                                </div>
+                                <button type="submit" class="site-btn login-btn">Sign In</button>
+                            </form>
+                            <div class="switch-login">
+                                <a href="./register.html" class="or-login">Or Create An Account</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-        </section>
-    </main>
-    <!--================ End Cart Area =================-->
-
-
-
+            </div>
+        </div>
+        <!-- Register Form Section End -->
 
     <!-- Footer -->
     <section id="contact" class="footer_wrapper mt-3 mt-md-0 pb-0">
         <div class="container pb-3">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
-                    <h5>Localización de tienda</h5>
-                    <p class="ps-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim erat ut
-                        laoreet pharetra....</p>
+                    <h5><i class="fa-solid fa-map-pin"></i> Localización </h5>
                     <div class="contact-info">
                         <ul class="list-unstyled">
                             <li><a href="#"><i class="fa fa-home me-3"></i>Calle de la Galería de Robles, 4, Madrid</a>
@@ -149,7 +141,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5>Mas Links</h5>
+                    <h5>Información</h5>
                     <ul class="link-widget p-0">
                         <li><a href="about">Sobre Nosotros</a></li>
                         <li><a href="#cursos">Cursos</a></li>
@@ -209,11 +201,11 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- js Links -->
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
     <!-- <script src="js/carrito.js"></script> -->
     <!-- NEW -->
     <script src="js/cart.js"></script>
-    <script src="js/compra.js"></script>
+    <script src="js/pedido.js"></script>
 
 </body>
 
