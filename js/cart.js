@@ -115,7 +115,7 @@ class Carrito {
         return productoLS
     }
 
-    //Eliminar curso por ID del LS
+    //Eliminar producto por ID del LS
     eliminarProductoLocalStorage(productoID) {
         let productosLS;
         //Obtenemos el array de productos
@@ -130,7 +130,7 @@ class Carrito {
         localStorage.setItem('productos', JSON.stringify(productosLS));
     }
 
-    //Imprime los productos del LocalStorage en el carrito
+    //Imprime los productos del LocalStorage en el modal carrito
     leerLocalStorage() {
         let productosLS;
         productosLS = this.obtenerProductosLocalStorage();
@@ -160,7 +160,7 @@ class Carrito {
         localStorage.clear();
     }
 
-    //Procesar compra en una página nueva
+    //Procesar compra hacia una página nueva
     procesarPedido(e) {
         e.preventDefault()
 
@@ -170,11 +170,39 @@ class Carrito {
                 title: 'Oops...',
                 text: 'El carrito está vacío',
                 icon: "error",
-                showConfirmButton: false, 
+                showConfirmButton: false,
                 timer: 2000
             })
         } else {
             location.href = "shopping-cart.html"
         }
+    }
+
+            //================= NUEVA VENTANA =================
+
+    // Imprime los productos del LocalStorage en el modal carrito
+    leerLocalStorageCompra() {
+        let productosLS;
+        productosLS = this.obtenerProductosLocalStorage();
+        productosLS.forEach(function (producto) {
+            //Construir el template        
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>
+                    <img src="${producto.imagen}" width=100>
+                </td>
+                <td>${producto.titulo}</td>
+                <td>${producto.precio}</td>
+                
+                <td>
+                    <input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}>
+                </td>
+                <td id="total">${producto.precio * producto.cantidad}</td>
+                <td>
+                    <a href="#" class="borrar-producto fas fa-times-circle" style="font-size:30px" data-id="${producto.id}"></a>
+                </td>
+            `;
+            listaCompra.appendChild(row);
+        });
     }
 }

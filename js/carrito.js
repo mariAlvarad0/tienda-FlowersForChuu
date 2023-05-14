@@ -105,7 +105,7 @@ stockProductos.forEach(prod => {
                         </li>
                     </ul>
                     <hr />
-                    <h3>${precio}€<sub class="fs-6 fw-normal"></sub></h3>
+                    <h3>${precio}<sub class="fs-6 fw-normal"></sub></h3>
                     <button onclick="agregarProducto(${id})" class="main-btn2">Pedir</button>
                 </div>
             </div>

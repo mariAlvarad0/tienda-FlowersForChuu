@@ -29,17 +29,17 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+<body>
     <!-- Menu navbar arriba -->
     <header class="header_wrapper">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg fixed-top">
                 <a class="navbar-brand" href="/">
                     <img src="img/logo.png" class="img-fluid" alt="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-stream navbar-toggler-icon"></i>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -83,20 +83,18 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
     <!-- fin del navbar -->
+    <!--================ Cart Area =================-->
     <main>
-
         <h2>Carrito de compra</h2>
-
-        <!--================Cart Area =================-->
         <section class="cart_area section_padding">
             <div class="container">
                 <div class="cart_inner">
-                    <div class="table-responsive">
-                        <table class="table">
+                    <div id="carrito" class="table-responsive">
+                        <table class="table" id="lista-compra">
                             <thead>
                                 <tr>
                                     <th scope="col">Producto</th>
@@ -104,72 +102,51 @@
                                     <th scope="col">Precio</th>
                                     <th scope="col">Cantidad</th>
                                     <th scope="col">Total</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex">
-                                            <img src="img/carrito/arco.jpg" width=100 alt="IMAGEN" />
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p>Minimalistic shop for multipurpose use</p>
-                                    </td>
-                                    <td>
-                                        <h5>$360.00</h5>
-                                    </td>
-                                    <td>
-                                        <div class="product_count">
-                                            <span class="input-number-decrement"> <i class="ti-minus"></i></span>
-                                            <input class="input-number" type="text" value="1" min="0" max="10">
-                                            <span class="input-number-increment"> <i class="ti-plus"></i></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <h5>$720.00</h5>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        <h5>Subotal</h5>
-                                    </td>
-                                    <td>
-                                        <h5>$2160.00</h5>
-                                    </td>
-                                </tr>
-                                <tr class="shipping_area">
-                                    <td>
-                                        <h5>Tipo de envío</h5>
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="correos" name="tipo_envio" value="HTML">
-                                        <label for="html">Correos: 5.00€</label><br>
-                                        <input type="radio" id="express" name="tipo_envio" value="CSS">
-                                        <label for="css">Correos Express: 12.00€</label><br>
-                                        <input type="radio" id="mrw" name="tipo_envio" value="JavaScript">
-                                        <label for="javascript">MRW: 3.50€</label><br>
-                                        <input type="radio" id="seur" name="tipo_envio" value="JavaScript">
-                                        <label for="javascript">SEUR: 10.00€</label><br>
-                                    </td>
-                                    <td></td>
-                                    <td>
-                                        <h5>Tipo de pago</h5>
-                                    </td>
-                                    <td>
-                                        <select class="shipping_select">
-                                            <option value="1">Tarjeta crédito</option>
-                                            <option value="1">Tarjeta débito</option>
-                                            <option value="1">Mastercard</option>
-                                            <option value="2">PayPal</option>
-                                            <option value="3">Google Pay</option>
-                                        </select>
-                                    </td>
-                                </tr>
                             </tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <th scope="col">
+                                    <h5>Subotal</h5>
+                                </th>
+                                <th scope="col">
+                                    <p id="subtotal"></p>
+                                </th>
+                            </tr>
+                            <tr class="shipping_area">
+                                <td>
+                                    <h5>Tipo de envío</h5>
+                                </td>
+                                <td>
+                                    <input type="radio" id="correos" name="tipo_envio" value="HTML">
+                                    <label for="html">Correos: 5.00€</label><br>
+                                    <input type="radio" id="express" name="tipo_envio" value="CSS">
+                                    <label for="css">Correos Express: 12.00€</label><br>
+                                    <input type="radio" id="mrw" name="tipo_envio" value="JavaScript">
+                                    <label for="javascript">MRW: 3.50€</label><br>
+                                    <input type="radio" id="seur" name="tipo_envio" value="JavaScript">
+                                    <label for="javascript">SEUR: 10.00€</label><br>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <h5>Tipo de pago</h5>
+                                </td>
+                                <td>
+                                    <select class="shipping_select">
+                                        <option value="1">Tarjeta crédito</option>
+                                        <option value="1">Tarjeta débito</option>
+                                        <option value="1">Mastercard</option>
+                                        <option value="2">PayPal</option>
+                                        <option value="3">Google Pay</option>
+                                    </select>
+                                </td>
+                            </tr>
+
                         </table>
                         <div>
                             <a href="/" class="main-btn2">CONTINUAR COMPRANDO</a>
@@ -178,8 +155,10 @@
                     </div>
                 </div>
         </section>
+    </main>
         <!--================End Cart Area =================-->
-    </main>>
+
+
     <!-- Footer -->
     <section id="contact" class="footer_wrapper mt-3 mt-md-0 pb-0">
         <div class="container pb-3">
@@ -258,11 +237,11 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- js Links -->
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
     <!-- <script src="js/carrito.js"></script> -->
     <!-- NEW -->
     <script src="js/cart.js"></script>
-    <script src="js/pedido.js"></script>
+    <script src="js/compra.js"></script>
 
 </body>
 
