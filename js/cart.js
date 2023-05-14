@@ -76,6 +76,7 @@ class Carrito {
         }
 
         this.eliminarProductoLocalStorage(productoID)
+        this.calcularTotal()
     }
 
     //Elimina todos los productos del carrito
@@ -143,7 +144,7 @@ class Carrito {
                 </td>
                 <td>
                     <div class="product-selected">
-                        <p>${producto.precio}</p>
+                        <p>${producto.precio} €</p>
                         <h6>${producto.titulo}</h6>
                     </div>
                 </td>
@@ -167,9 +168,10 @@ class Carrito {
         // Si el carrito está vacío no me permite comprar nada: 
         if (this.obtenerProductosLocalStorage().length === 0) {
             Swal.fire({
+                type: 'error',
                 title: 'Oops...',
                 text: 'El carrito está vacío',
-                icon: "error",
+                icon: 'error',
                 showConfirmButton: false,
                 timer: 2000
             })
@@ -178,7 +180,7 @@ class Carrito {
         }
     }
 
-            //================= NUEVA VENTANA =================
+    //================= NUEVA VENTANA =================
 
     // Imprime los productos del LocalStorage en el modal carrito
     leerLocalStorageCompra() {
@@ -192,17 +194,71 @@ class Carrito {
                     <img src="${producto.imagen}" width=100>
                 </td>
                 <td>${producto.titulo}</td>
-                <td>${producto.precio}</td>
+                <td>${producto.precio} €</td>
                 
                 <td>
                     <input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}>
                 </td>
-                <td id="total">${producto.precio * producto.cantidad}</td>
+                <td id="subtotal">${producto.precio * producto.cantidad} €</td>
                 <td>
-                    <a href="#" class="borrar-producto fas fa-times-circle" style="font-size:30px" data-id="${producto.id}"></a>
+                    <a href="#" class="borrar-producto fa-solid fa-trash" data-id="${producto.id}"></a>
                 </td>
             `;
             listaCompra.appendChild(row);
         });
+    }
+
+    // Calcula el total de la compra
+    calcularTotal() {
+        let productoLS;
+        let total = 0;
+
+        productoLS = this.obtenerProductosLocalStorage();
+
+        for (let index = 0; index < productoLS.length; index++) {
+            let element = Number(productoLS[index].precio * productoLS[index].cantidad);
+            total = total + element;
+        }
+
+        document.getElementById('total').innerHTML = total.toFixed(2) + " €";
+    }
+
+    // Procesar compra
+    procesarCompra(e) {
+        e.preventDefault()
+
+        if (compra.obtenerProductosLocalStorage().length === 0) {
+            Swal.fire({
+                type: 'error',
+                title: '¡La cesta está vacía!',
+                text: 'No hay ningún producto en la lista. Compra algo para continuar',
+                icon: 'error',
+                showConfirmButton: false,
+                timer: 4000
+            }).then(function () {
+                window.location = "index.html" // Si no hay nada en el carrito, nos devuelve a la página principal
+            })
+        } else {
+            // Animación para esperar validación proceso de compra
+            const spinnerGif = document.querySelector('#spinner');
+            spinnerGif.style.display = 'block';
+
+            // Insertamos un cartel de éxito
+            const alertExito = document.createElement('p')
+            alertExito.classList.add('alert', 'alerta', 'd-block', 'text-center', 'col-12', 'mt-2', 'alert-success')
+            alertExito.textContent = 'Compra realizada correctamente'
+
+            //Ocultar sppiner 
+            setTimeout(function () {
+                spinnerGif.style.display = 'none';
+                document.querySelector('#loaders').appendChild(alertExito);
+
+                setTimeout(() => {
+                    alertExito.remove();
+                    compra.vaciarLocalStorage();
+                    window.location = "index.html"; // Redirigimos a la página principal al  terminar la compra
+                }, 4000);
+            }, 3000);
+        }
     }
 }
