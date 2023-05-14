@@ -88,42 +88,100 @@
     </header>
     <!-- fin del navbar -->
 
-    <!-- Register Section Begin -->
-    <div class="register-login-section spad">
+    <!-- Shopping Cart Section Begin -->
+    <section class="checkout-section spad">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="login-form">
-                        <h2>Iniciar sesión</h2>
-                        <form action="#">
-                            <div class="group-input">
-                                <label for="username">Email *</label>
-                                <input type="text" id="username">
+            <form action="#" class="checkout-form">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="checkout-content">
+                            <a href="login.html" class="content-btn main-btn2">Iniciar Sesión</a>
+                        </div>
+                        <h4>Detalles de envío</h4>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="fir">Nombre<span>*</span></label>
+                                <input type="text" id="fir">
                             </div>
-                            <div class="group-input">
-                                <label for="pass">Contraseña *</label>
-                                <input type="text" id="pass">
+                            <div class="col-lg-6">
+                                <label for="last">Apellidos<span>*</span></label>
+                                <input type="text" id="last">
                             </div>
-                            <div class="group-input gi-check">
-                                <div class="gi-more">
-                                    <label for="save-pass">
-                                        <input type="checkbox" id="save-pass"> Guardar Contraseña
+                            <div class="col-lg-12">
+                                <label for="cun">País<span>*</span></label>
+                                <input type="text" id="cun">
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="street">Dirección<span>*</span></label>
+                                <input type="text" id="street" class="street-first">
+                                <input type="text">
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="zip">Código Postal</label>
+                                <input type="text" id="zip">
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="town">Localidad / Ciudad<span>*</span></label>
+                                <input type="text" id="town">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="email">Email<span>*</span></label>
+                                <input type="text" id="email">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="phone">Teléfono<span>*</span></label>
+                                <input type="text" id="phone">
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="create-item">
+                                    <label for="acc-create">
+                                        Crear una cuenta
+                                        <input type="checkbox" id="acc-create">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <a href="#" class="forget-pass">Olvidé mi contraseña</a>
                                 </div>
                             </div>
-                            <button type="submit" class="site-btn login-btn">INICIAR SESIÓN</button>
-                        </form>
-                        <div class="switch-login">
-                            <a href="./register.html" class="or-login">Crear una cuenta</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="place-order">
+                            <h4>Mis pedidos</h4>
+                            <div class="order-total">
+                                <ul class="order-table">
+                                    <li>Product <span>Total</span></li>
+                                    <li class="fw-normal">Combination x 1 <span>$60.00</span></li>
+                                    <li class="fw-normal">Combination x 1 <span>$60.00</span></li>
+                                    <li class="fw-normal">Combination x 1 <span>$120.00</span></li>
+                                    <li class="fw-normal">Subtotal <span>$240.00</span></li>
+                                    <li class="total-price">Total <span>$240.00</span></li>
+                                </ul>
+                                <div class="payment-check">
+                                    <div class="pc-item">
+                                        <label for="pc-check">
+                                            Cheque Payment
+                                            <input type="checkbox" id="pc-check">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="pc-item">
+                                        <label for="pc-paypal">
+                                            Paypal
+                                            <input type="checkbox" id="pc-paypal">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="order-btn">
+                                    <button type="submit" class="site-btn place-btn">Place Order</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
-    </div>
-    <!-- Register Form Section End -->
+    </section>
+    <!-- Shopping Cart Section End -->
 
     <!-- Footer -->
     <section id="contact" class="footer_wrapper mt-3 mt-md-0 pb-0">

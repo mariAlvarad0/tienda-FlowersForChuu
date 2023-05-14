@@ -12,8 +12,7 @@
 10. Blog
 11. Contacto
 12. Footer
-13. Modal ventas
-14. Animación para tramitar pedido 
+13. Animación para tramitar pedido 
 -------------------- */
 
 /* 1 General */
@@ -831,24 +830,7 @@ p {
     }
 }
 
-/* 13 Modal ventas (app.js) */
-.modal-contenedor {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.img-carrito {
-    width: 200px;
-    padding: 20px;
-}
-
-.parrafo {
-    font-weight: 700;
-    font-style: italic;
-}
-
-/* 14 Spinner: Animación para tramitar pedido */
+/* 13 Spinner: Animación para tramitar pedido */
 #spinner {
     width: auto;
     height: 200px;
