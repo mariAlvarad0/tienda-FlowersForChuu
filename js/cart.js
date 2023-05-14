@@ -163,5 +163,18 @@ class Carrito {
     //Procesar compra en una página nueva
     procesarPedido(e) {
         e.preventDefault()
+
+        // Si el carrito está vacío no me permite comprar nada: 
+        if (this.obtenerProductosLocalStorage().length === 0) {
+            Swal.fire({
+                title: 'Oops...',
+                text: 'El carrito está vacío',
+                icon: "error",
+                showConfirmButton: false, 
+                timer: 2000
+            })
+        } else {
+            location.href = "shopping-cart.html"
+        }
     }
 }

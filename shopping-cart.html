@@ -1,0 +1,269 @@
+<!-- HTML PRINCIPAL -->
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers for Chuu</title>
+
+    <!-- Bootstrap Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Icono de la pestaña -->
+    <link rel="icon" type="image/png" href="img/chuu_window.jpg">
+
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/381d681eb9.js" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <!-- Menu navbar arriba -->
+    <header class="header_wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="img/logo.png" class="img-fluid" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-stream navbar-toggler-icon"></i>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav menu-navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cursos">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#plantilla">Plantilla</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeria">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ventas">Ventas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reservar">Reservar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link login-panel">
+                                <i class="fa-solid fa-user"></i>Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- fin del navbar -->
+    <main>
+
+        <h2>Carrito de compra</h2>
+
+        <!--================Cart Area =================-->
+        <section class="cart_area section_padding">
+            <div class="container">
+                <div class="cart_inner">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Descripción</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex">
+                                            <img src="img/carrito/arco.jpg" width=100 alt="IMAGEN" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>Minimalistic shop for multipurpose use</p>
+                                    </td>
+                                    <td>
+                                        <h5>$360.00</h5>
+                                    </td>
+                                    <td>
+                                        <div class="product_count">
+                                            <span class="input-number-decrement"> <i class="ti-minus"></i></span>
+                                            <input class="input-number" type="text" value="1" min="0" max="10">
+                                            <span class="input-number-increment"> <i class="ti-plus"></i></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>$720.00</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Subotal</h5>
+                                    </td>
+                                    <td>
+                                        <h5>$2160.00</h5>
+                                    </td>
+                                </tr>
+                                <tr class="shipping_area">
+                                    <td>
+                                        <h5>Tipo de envío</h5>
+                                    </td>
+                                    <td>
+                                        <input type="radio" id="correos" name="tipo_envio" value="HTML">
+                                        <label for="html">Correos: 5.00€</label><br>
+                                        <input type="radio" id="express" name="tipo_envio" value="CSS">
+                                        <label for="css">Correos Express: 12.00€</label><br>
+                                        <input type="radio" id="mrw" name="tipo_envio" value="JavaScript">
+                                        <label for="javascript">MRW: 3.50€</label><br>
+                                        <input type="radio" id="seur" name="tipo_envio" value="JavaScript">
+                                        <label for="javascript">SEUR: 10.00€</label><br>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Tipo de pago</h5>
+                                    </td>
+                                    <td>
+                                        <select class="shipping_select">
+                                            <option value="1">Tarjeta crédito</option>
+                                            <option value="1">Tarjeta débito</option>
+                                            <option value="1">Mastercard</option>
+                                            <option value="2">PayPal</option>
+                                            <option value="3">Google Pay</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <a href="/" class="main-btn2">CONTINUAR COMPRANDO</a>
+                            <a href="#" class="main-btn2">FINALIZAR PEDIDO</a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!--================End Cart Area =================-->
+    </main>>
+    <!-- Footer -->
+    <section id="contact" class="footer_wrapper mt-3 mt-md-0 pb-0">
+        <div class="container pb-3">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h5>Localización de tienda</h5>
+                    <p class="ps-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim erat ut
+                        laoreet pharetra....</p>
+                    <div class="contact-info">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa fa-home me-3"></i>Calle de la Galería de Robles, 4, Madrid</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-phone me-3"></i>+34 111 222 333</a></li>
+                            <li><a href="#"><i class="fa fa-envelope me-3"></i>forchuu@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Mas Links</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Nuestra Tienda</a></li>
+                        <li><a href="#">Libros</a></li>
+                        <li><a href="#">Clases</a></li>
+                        <li><a href="#">Garantía</a></li>
+                        <li><a href="#">Política De Devolución</a></li>
+                        <li><a href="#">Cursos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Demo Links</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Nuestra Tienda</a></li>
+                        <li><a href="#">Libros</a></li>
+                        <li><a href="#">Clases</a></li>
+                        <li><a href="#">Garantía</a></li>
+                        <li><a href="#">Política De Devolución</a></li>
+                        <li><a href="#">Cursos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contacto</h5>
+                    <div class="form-group mb-4">
+                        <button type="submit" class="main-btn rounded-2 mt-3 border-white text-white"
+                            data-bs-toggle="modal" data-bs-target="#exampleModalContacto"
+                            onclick="recogerDatos()">Contáctanos</button>
+                    </div>
+                    <h5>Conéctate</h5>
+                    <ul class="social-network d-flex align-items-center p-0">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright-section">
+            <p>Copyright <a href="#">&copy;Flowers For Chuu</a> All Rights Reserved</p>
+        </div>
+    </section>
+    <!-- Footer fin -->
+
+    <!-- Bootstrap JS Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Carrousel JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Sweet Alert JS -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- js Links -->
+    <script src="js/main.js"></script>
+    <!-- <script src="js/carrito.js"></script> -->
+    <!-- NEW -->
+    <script src="js/cart.js"></script>
+    <script src="js/pedido.js"></script>
+
+</body>
+
+</html>
